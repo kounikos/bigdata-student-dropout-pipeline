@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid d-flex flex-column align-items-center text-bg-secondary p-4">
+    <h2 class="pb-3 mt-2">Press the button to start HDFS, KAFKA, FLUME</h2>
+    <form action="/kafka_start" method="post">
+        <button class="btn btn-primary btn-lg font-monospace"><i class="fa-solid fa-server"></i> Servers start</button>
+    </form>
+</div>
+{% endblock %}

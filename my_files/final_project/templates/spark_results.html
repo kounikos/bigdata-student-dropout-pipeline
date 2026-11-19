@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid d-flex flex-column align-items-center text-bg-success p-4">
+    <h2 class="pb-3 mt-2">Results from Map Reduce job:</h2>
+    {% for result in results %}
+        <p class="text-break text-center">{{ result }}</p>
+    {% endfor %}
+</div>
+<div class="container-fluid d-flex flex-column align-items-center text-bg-secondary p-4">
+    <h2 class="pb-3 mt-2">Initiate MLlib machine learning</h2>
+    <form action="/mllib_results" method="post">
+        <button class="btn btn-primary btn-lg font-monospace"><i class="fa-solid fa-database"></i> Start MLlib</button>
+    </form>
+</div>
+{% endblock %}

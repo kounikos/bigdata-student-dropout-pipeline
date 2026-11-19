@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid d-flex flex-column align-items-center text-bg-success p-4">
+    <h2 class="pb-3 mt-2">Streamed Kafka data sample:</h2>
+    <p class="text-break">{{ avro }}</p>
+</div>
+<div class="container-fluid d-flex flex-column align-items-center text-bg-secondary p-4">
+    <h2 class="pb-3 mt-2">Press the button to gather statistics with Spark</h2>
+    <form action="/spark_results" method="post">
+        <button class="btn btn-primary btn-lg font-monospace"><i class="fa-solid fa-database"></i> Start Spark job</button>
+    </form>
+</div>
+{% endblock %}
