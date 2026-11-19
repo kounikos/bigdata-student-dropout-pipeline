@@ -1,0 +1,16 @@
+Output of `python3 mllib_2026.py` on 2026-11-19 (Spark 3.2.1 local mode, Java 8, Python 3.8)
+
+Dataset: 4424 students, 36 features; train 3162 / test 1262 (70/30 split, seed 42)
+Baseline (always 'Graduate'): accuracy 50.0%
+Logistic regression (multinomial): accuracy 75.7%, weighted F1 0.737
+  recall per class: Dropout 73%, Enrolled 27%, Graduate 94%
+  confusion (actual \ predicted): Dropout | Enrolled | Graduate
+     Dropout: 307 | 39 | 75
+    Enrolled: 50 | 57 | 103
+    Graduate: 17 | 23 | 591
+Random forest (100 trees): accuracy 76.5%, weighted F1 0.749
+  recall per class: Dropout 73%, Enrolled 31%, Graduate 94%
+  confusion (actual \ predicted): Dropout | Enrolled | Graduate
+     Dropout: 307 | 40 | 74
+    Enrolled: 49 | 66 | 95
+    Graduate: 13 | 25 | 593

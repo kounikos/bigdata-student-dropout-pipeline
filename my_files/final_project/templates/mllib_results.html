@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid d-flex flex-column align-items-center text-bg-success p-4">
+    <h2 class="pb-3 mt-2">MLlib: predicting student outcome (Dropout / Enrolled / Graduate)</h2>
+    {% for result in results %}
+        <pre class="text-break mb-2">{{ result }}</pre>
+    {% endfor %}
+</div>
+<div class="container-fluid d-flex flex-column align-items-center text-bg-secondary p-4">
+    <form action="/" method="get">
+        <button class="btn btn-primary btn-lg font-monospace"><i class="fa-solid fa-house"></i> Back to start</button>
+    </form>
+</div>
+{% endblock %}
